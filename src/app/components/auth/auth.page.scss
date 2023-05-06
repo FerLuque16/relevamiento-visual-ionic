@@ -26,23 +26,23 @@
 //   text-decoration: none;
 // }
 
-.main-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+// .main-container{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
 .fab{
     position: absolute;
     bottom: 50px;
     right: 15px;
-    width: 100px;
+    width: 70px;
 }
 
 .botonPrincipal{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 .botonesLogueo{
@@ -51,17 +51,17 @@
     right: 35px;
 
 
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 .heading{
     
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
     padding-left: 16px;
     padding-right: 16px;
-    margin-top: 70px;
+    // margin-top: 70px;
     color: black;
     
 }

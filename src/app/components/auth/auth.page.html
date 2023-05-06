@@ -21,32 +21,35 @@
 </ion-header> -->
 
 <ion-content>
-  <div class="main-container background-image">
+  <div class="background-image">
 
-    <div class="icon ion-text-center">
-      <img src="assets/icon.png">
-
+    <div class="main-container">
+      <div class="icon ion-text-center">
+        <img src="assets/icon.png">
+  
+      </div>
+      <h1 class="heading ion-text-center">Relevamiento Visual<br><br></h1>
+  
+      <div class="contenedor-login">
+  
+        <p class="para">Iniciar sesion</p>
+  
+        <form [formGroup]="formData">
+          <ion-item class="ion-item">
+            <ion-input label="Email" label-placement="floating"  fill="solid" placeholder="nombre@dominio.com" formControlName="email" type="email"></ion-input>
+  
+          </ion-item>
+  
+          <ion-item  class="ion-item">
+            <ion-input label="Contraseña" label-placement="floating"  fill="solid" placeholder="******" formControlName="password" type="password"></ion-input>       
+          </ion-item>
+  
+          <ion-button class="login-button" type="submit" (click)="login()" expand="block">Ingresar</ion-button>
+  
+        </form>
+      </div>
     </div>
-    <h1 class="heading ion-text-center">Bienvenido a la app de Relevamiento Visual<br><br></h1>
-
-    <div class="contenedor-login">
-
-      <p class="para">Iniciar sesion</p>
-
-      <form [formGroup]="formData">
-        <ion-item class="ion-item">
-          <ion-input label="Email" label-placement="floating"  fill="solid" placeholder="nombre@dominio.com" formControlName="email" type="email"></ion-input>
-
-        </ion-item>
-
-        <ion-item  class="ion-item">
-          <ion-input label="Contraseña" label-placement="floating"  fill="solid" placeholder="******" formControlName="password" type="password"></ion-input>       
-        </ion-item>
-
-        <ion-button class="login-button" type="submit" (click)="login()" expand="block">Ingresar</ion-button>
-
-      </form>
-    </div>
+    
   </div>
 
   <ion-fab class="fab" horizontal="end" vertical="bottom" slot="fixed">

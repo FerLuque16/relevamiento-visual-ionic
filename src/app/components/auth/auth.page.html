@@ -1,0 +1,70 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>auth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">auth</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main-container background-image">
+
+    <div class="icon ion-text-center">
+      <img src="assets/icon.png">
+
+    </div>
+    <h1 class="heading ion-text-center">Bienvenido a la app de Relevamiento Visual<br><br></h1>
+
+    <div class="contenedor-login">
+
+      <p class="para">Iniciar sesion</p>
+
+      <form [formGroup]="formData">
+        <ion-item class="ion-item">
+          <ion-input label="Email" label-placement="floating"  fill="solid" placeholder="nombre@dominio.com" formControlName="email" type="email"></ion-input>
+
+        </ion-item>
+
+        <ion-item  class="ion-item">
+          <ion-input label="Contraseña" label-placement="floating"  fill="solid" placeholder="******" formControlName="password" type="password"></ion-input>       
+        </ion-item>
+
+        <ion-button class="login-button" type="submit" (click)="login()" expand="block">Ingresar</ion-button>
+
+      </form>
+    </div>
+  </div>
+
+  <ion-fab class="fab" horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" class="botonPrincipal">
+      <!-- <ion-img src="assets/flecha-fab-button.svg"></ion-img> -->
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="primary" class="botonesLogueo">
+        <ion-img src="/assets/admin.png" (click)="completarDatos('admin@admin.com','111111')"></ion-img>
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="botonesLogueo">
+        <ion-img src="/assets/invitado.png" (click)="completarDatos('invitado@invitado.com','222222')"></ion-img>
+      </ion-fab-button>
+      <ion-fab-button color="tertiary" class="botonesLogueo">
+        <ion-img src="/assets/anonimo.png" (click)="completarDatos('anonimo@anonimo.com','444444')"></ion-img>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>

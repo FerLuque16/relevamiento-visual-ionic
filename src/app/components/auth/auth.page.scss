@@ -1,0 +1,168 @@
+// #container {
+//   text-align: center;
+
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fab{
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    width: 100px;
+}
+
+.botonPrincipal{
+    width: 80px;
+    height: 80px;
+}
+
+.botonesLogueo{
+    position: relative;
+    // bottom: 50px;
+    right: 35px;
+
+
+    width: 80px;
+    height: 80px;
+}
+
+.heading{
+    
+    font-size: 32px;
+    font-weight: bold;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 70px;
+    color: black;
+    
+}
+
+.icon{
+    margin-top:-75px;
+    img{
+        height: 150px;
+    }
+       
+}
+
+
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/edificios.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+.custom-input{
+    --background: #F2F2F2;
+    --border-color: transparent;
+    --border-radius: 10px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --placeholder-color: #9B9B9B;
+    --placeholder-opacity: 1;
+    --color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+  
+.login-container {
+    position: relative;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+  
+ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+}
+  
+ion-input {
+    --background: rgba(255, 255, 255, 0.6);
+    --border-radius: 5px;
+    --placeholder-color: rgba(0, 0, 0, 0.5);
+}
+  
+
+
+.contenedor-login{
+    width: 90%;
+    padding: 10px;
+
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    ion-item{
+        --background: #ffffff;
+        
+    }
+    ion-button{
+        margin-top: 20px;
+        --background:#5F42B0;
+        border-radius: 5px;
+        --color: #FFF;
+
+    }
+
+    ion-button:active{
+        transform: scale(0.95);
+        --background:#5F42B0;
+    }
+}
+
+.ion-activated{
+    --background:#5F42B0;
+}
+
+.para{
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+  

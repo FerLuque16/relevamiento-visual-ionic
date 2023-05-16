@@ -1,0 +1,36 @@
+ion-content{
+    // --background:#1E1F21;
+    // --background:#272727;
+    --background:#233a66;
+    
+}
+
+.contenedor-principal{
+    padding: 14px;
+}
+
+ion-card{
+    img{
+        object-fit: cover;
+    }
+}
+ion-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+ion-card-subtitle{
+    --color:black;
+}
+
+.card{
+    // background-color: #d1c007;
+    background-color: #ffd691;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+ion-fab-button{
+    --background:#ffd691;
+    --color: #1E1F21
+}

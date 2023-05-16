@@ -18,4 +18,9 @@ export class HomePage implements OnInit {
     this.auth.logout();
     this.router.navigateByUrl('auth');
   }
+
+  irHacia(ruta:string){
+    this.router.navigateByUrl(ruta);
+  }
+
 }

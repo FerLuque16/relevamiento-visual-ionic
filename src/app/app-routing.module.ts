@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'splash',
     loadChildren: () => import('./components/splash/splash.module').then( m => m.SplashPageModule)
   },
+  {
+    path: 'cosasLindas',
+    loadChildren: () => import('./components/cosas-lindas/cosas-lindas.module').then( m => m.CosasLindasPageModule)
+  },
+  {
+    path: 'cosasFeas',
+    loadChildren: () => import('./components/cosas-feas/cosas-feas.module').then( m => m.CosasFeasPageModule)
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cosasLindas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">cosasLindas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="contenedor-principal">
+    
+  <ion-card class="card">
+    
+    <ion-card-header>
+      <ion-card-title>Email</ion-card-title>
+      <ion-card-subtitle>Fecha y hora</ion-card-subtitle>
+    </ion-card-header>
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+  </div>
+
+
+  <ion-fab slot="fixed" horizontal="center" vertical="bottom">
+    <ion-fab-button (click)="subirFoto()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

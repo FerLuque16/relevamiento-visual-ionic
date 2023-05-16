@@ -31,7 +31,7 @@ export class AuthPage implements OnInit {
   async login(){
     try {
       await this.authService.login(this.formData.value.email,this.formData.value.password);
-      this.router.navigate(['/home']);
+      this.router.navigateByUrl('home',{replaceUrl:true});
 
     } catch{
       console.log("Error");

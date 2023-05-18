@@ -60,22 +60,15 @@
 
 .texto-splash{
     font-size: 32px;
-    color: #000000;
+    color: white;
 }
 
 .contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    flex-direction: column;
     height: 100%;
-    background-image: url('/assets/edificios.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
 }
 
 .slide-in-fwd-top {

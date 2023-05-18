@@ -35,26 +35,55 @@
         <p class="para">Iniciar sesion</p>
   
         <form [formGroup]="formData">
-          <ion-item class="ion-item">
+          <!-- <ion-item class="ion-item">
             <ion-input label="Email" label-placement="floating"  fill="solid" placeholder="nombre@dominio.com" formControlName="email" type="email"></ion-input>
-  
-          </ion-item>
-  
-          <ion-item  class="ion-item">
+            
+
+          </ion-item> -->
+
+          <div class="input-container">
+            <input class="transparent-input" placeholder="Email" formControlName="email" type="email">
+            
+
+          </div>
+          <div class="input-container">
+            
+            <input class="transparent-input" placeholder="Contraseña" formControlName="password" type="password">
+
+          </div>
+          <!-- <ion-item  class="ion-item">
             <ion-input label="Contraseña" label-placement="floating"  fill="solid" placeholder="******" formControlName="password" type="password"></ion-input>       
-          </ion-item>
+            
+          </ion-item> -->
   
           <ion-button class="login-button" type="submit" (click)="login()" expand="block">Ingresar</ion-button>
   
         </form>
       </div>
+
+      <div class="autologuin-container">
+        <div class="contenedor-imagen" (click)="completarDatos('admin@admin.com','111111')">
+          <img class="img-user" src="/assets/admin.png" alt="">
+        </div>
+        <div class="contenedor-imagen" (click)="completarDatos('invitado@invitado.com','222222')">
+          <img class="img-user" src="/assets/invitado.png" alt="">
+        </div>
+        <div class="contenedor-imagen" (click)="completarDatos('anonimo@anonimo.com','444444')">
+          <img class="img-user" src="/assets/anonimo.png" alt="">
+        </div>
+
+
+
+      </div>
+
+
+
     </div>
     
   </div>
 
-  <ion-fab class="fab" horizontal="end" vertical="bottom" slot="fixed">
+  <!-- <ion-fab class="fab" horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="danger" class="botonPrincipal">
-      <!-- <ion-img src="assets/flecha-fab-button.svg"></ion-img> -->
       <ion-icon name="log-in-outline"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="start">
@@ -68,6 +97,6 @@
         <ion-img src="/assets/anonimo.png" (click)="completarDatos('anonimo@anonimo.com','444444')"></ion-img>
       </ion-fab-button>
     </ion-fab-list>
-  </ion-fab>
+  </ion-fab> -->
   
 </ion-content>

@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>cosasFeas</ion-title>
   </ion-toolbar>
@@ -11,12 +11,145 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-fab horizontal="center" vertical="bottom">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <div class="contenedor-principal">
+    
+
+
+    <ion-card class="card">
+      
+      <ion-card-header>
+        <ion-card-title>Email</ion-card-title>
+        <ion-card-subtitle>Fecha y hora</ion-card-subtitle>
+      </ion-card-header>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    
+      <ion-card-content>
+        <div class="contenedorLikes">
+          
+        </div>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="card" *ngFor="let item of cosasLindas; let i = index" data-index="i">
+      
+      <ion-card-header>
+        <ion-card-title>{{item.email}}</ion-card-title>
+        <ion-card-subtitle>{{item.hora}}</ion-card-subtitle>
+      </ion-card-header>
+      <img alt="Silhouette of mountains" src="{{item.pathFoto}}" />
+    
+      <ion-card-content>
+        <div class="contenedorLikes">
+          <ion-icon id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)" style="color: rgb(209, 37, 37);"
+                *ngIf="item.likes.indexOf(this.auth.actualEmail) != -1"></ion-icon>
+              <ion-icon id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)"
+                *ngIf="item.likes.indexOf(this.auth.actualEmail) == -1" style="color: rgb(0, 0, 0);"></ion-icon>
+              <ion-label class="numeroLikes">{{item.likes.length}}</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    </div>
+  
+  
+    <ion-fab slot="fixed" horizontal="center" vertical="bottom">
+      <ion-fab-button (click)="subirFoto()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 
 
 
-</ion-content>
+</ion-content> -->
+
+<ion-menu contentId="main-content" class="menu">
+  <ion-header class="header-color">
+    <ion-toolbar>
+      <ion-title>Cosas Feas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content style="background-color: #233a66;" class="ion-padding">
+
+    <ion-list id="inbox-list">
+      <ion-list-header>{{this.auth.actualEmail}}</ion-list-header>
+      <ion-note ></ion-note>
+
+      <ion-menu-toggle  auto-hide="true">
+        <ion-item  routerDirection="root" routerLink="/home">
+          <ion-icon name="home-outline" ></ion-icon>
+          <ion-label >Home</ion-label>
+        </ion-item>
+        <ion-item  routerDirection="root" routerLink="/cosasLindas">
+          <ion-icon name="image-outline"></ion-icon>
+          <ion-label >Cosas Lindas</ion-label>
+        </ion-item>
+        <ion-item  routerDirection="root">
+          <ion-icon name="images-outline"></ion-icon>
+          <ion-label >Mis imagenes</ion-label>
+        </ion-item>
+        <ion-item  routerDirection="root" (click)="cerrarSesion()">
+          <ion-icon  name="log-out-outline" class="icon-logout"></ion-icon>
+          <ion-label >Cerrar sesion</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header >
+    <ion-toolbar class="toolbar-background">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Cosas Feas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="contenedor-principal">
+    
+
+
+      <!-- <ion-card class="card">
+        
+        <ion-card-header>
+          <ion-card-title>Email</ion-card-title>
+          <ion-card-subtitle>Fecha y hora</ion-card-subtitle>
+        </ion-card-header>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      
+        <ion-card-content>
+          <div class="contenedorLikes">
+            
+          </div>
+        </ion-card-content>
+      </ion-card>
+     -->
+      <ion-card class="card" *ngFor="let item of cosasFeas; let i = index" data-index="i">
+        
+        <ion-card-header>
+          <ion-card-title>{{item.email}}</ion-card-title>
+          <ion-card-subtitle>{{item.hora}}</ion-card-subtitle>
+        </ion-card-header>
+        <img alt="Silhouette of mountains" src="{{item.pathFoto}}" />
+      
+        <ion-card-content>
+          <div class="contenedorLikes">
+            <ion-icon id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)" style="color: rgb(209, 37, 37);"
+                  *ngIf="item.likes.indexOf(this.auth.actualEmail) != -1"></ion-icon>
+                <ion-icon id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)"
+                  *ngIf="item.likes.indexOf(this.auth.actualEmail) == -1" style="color: rgb(0, 0, 0);"></ion-icon>
+                <ion-label class="numeroLikes">{{item.likes.length}}</ion-label>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      </div>
+    
+    
+      <ion-fab slot="fixed" horizontal="center" vertical="bottom">
+        <ion-fab-button (click)="subirFoto()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+  </ion-content>
+</div>

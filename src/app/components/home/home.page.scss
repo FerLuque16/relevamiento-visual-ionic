@@ -3,10 +3,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/edificios.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+    // background-image: url('/assets/edificios.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // z-index: -1;
 }
 
 .main-container{
@@ -15,7 +15,14 @@
 }
 
 .contenedor{
-    padding: 30px;
+    // padding: 14px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
 }
 button{
     border-radius: 5px;
@@ -24,4 +31,68 @@ button{
 .boton-logout{
    position: absolute;
    bottom: 30px;
+}
+
+ion-button{
+    ion-icon{
+
+        transform: rotate(180deg);
+        margin-left: 2px;
+        margin-bottom: 5px;
+    }
+}
+
+ion-toolbar{
+    --background:#ffd691;
+}
+
+ion-list-header{
+    --color:white;
+    font-size: large;
+}
+
+ion-item{
+    --color:white;
+    
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom:1px solid white;
+    ion-icon{
+        color:white;
+        margin-right: 5px;
+    }
+}
+.card{
+    // background-color: #d1c007;
+    background-color: #ffd691;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+
+ion-card{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    img{
+        object-fit: cover;
+        height: 200px;
+        
+        
+    }
+}
+ion-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+ion-button:active, ion-card:active{
+    transform: scale(0.95);
+    
 }

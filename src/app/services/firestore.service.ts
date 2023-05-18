@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { collection, orderBy } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 
@@ -9,10 +10,10 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
 
   
-  cosasLindasCollectionReference: any;
+  cosasLindasCollectionReference: AngularFirestoreCollection<any>;
   cosasLindas: Observable<any>;
 
-  cosasFeasCollectionReference: any;
+  cosasFeasCollectionReference: AngularFirestoreCollection<any>;
   cosasFeas: Observable<any>;
 
   cosasLindasArray : any = [];
@@ -20,10 +21,18 @@ export class FirestoreService {
 
   constructor(private firestore : AngularFirestore) {
 
-    this.cosasLindasCollectionReference = this.firestore.collection<any>('cosasLindas');
+    // this.cosasLindasCollectionReference = this.firestore.collection<any>('cosasLindas');
+    // this.cosasLindas = this.cosasLindasCollectionReference.valueChanges({idField: 'id'});
+    this.cosasLindasCollectionReference = this.firestore.collection<any>('cosasLindas', ref => ref.orderBy('date','desc'));
     this.cosasLindas = this.cosasLindasCollectionReference.valueChanges({idField: 'id'});
+    // this.cosasLindas = this.cosasLindasCollectionReference;
 
-    this.cosasFeasCollectionReference = this.firestore.collection<any>('cosasFeas');
+    // this.cosasLindasCollectionReference = this.firestore.collection('cosasLindas',orderBy('date','desc'));
+
+    // this.cosasLindas = this.cosasLindasCollectionReference;
+
+    // this.cosasFeasCollectionReference = this.firestore.collection<any>('cosasFeas');
+    this.cosasFeasCollectionReference = this.firestore.collection<any>('cosasFeas', ref => ref.orderBy('date','desc'));
     this.cosasFeas = this.cosasFeasCollectionReference.valueChanges({idField: 'id'});
 
 

@@ -11,7 +11,9 @@ export class AppComponent {
 
   ngOnInit(){
     // this.router.navigateByUrl('splash');
-        this.router.navigateByUrl('home');
+    //  this.router.navigateByUrl('home');
+    // this.router.navigateByUrl('auth');
+    this.router.navigateByUrl('cosasLindas');
 
 
   }

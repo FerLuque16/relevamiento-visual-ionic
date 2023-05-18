@@ -10,10 +10,10 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit(){
-    // this.router.navigateByUrl('splash');
+    this.router.navigateByUrl('splash');
     //  this.router.navigateByUrl('home');
     // this.router.navigateByUrl('auth');
-    this.router.navigateByUrl('cosasLindas');
+    // this.router.navigateByUrl('cosasLindas');
 
 
   }

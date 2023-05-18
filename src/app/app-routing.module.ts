@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'cosasFeas',
     loadChildren: () => import('./components/cosas-feas/cosas-feas.module').then( m => m.CosasFeasPageModule)
+  },
+  {
+    path: 'graficos',
+    loadChildren: () => import('./components/graficos/graficos.module').then( m => m.GraficosPageModule)
   }
 ];
 

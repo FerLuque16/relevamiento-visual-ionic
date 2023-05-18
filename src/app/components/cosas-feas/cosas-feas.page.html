@@ -82,10 +82,14 @@
           <ion-icon name="image-outline"></ion-icon>
           <ion-label >Cosas Lindas</ion-label>
         </ion-item>
-        <ion-item  routerDirection="root">
+        <ion-item  routerDirection="root" routerLink="/graficos">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+          <ion-label >Graficos</ion-label>
+        </ion-item>
+        <!-- <ion-item  routerDirection="root">
           <ion-icon name="images-outline"></ion-icon>
           <ion-label >Mis imagenes</ion-label>
-        </ion-item>
+        </ion-item> -->
         <ion-item  routerDirection="root" (click)="cerrarSesion()">
           <ion-icon  name="log-out-outline" class="icon-logout"></ion-icon>
           <ion-label >Cerrar sesion</ion-label>
@@ -125,6 +129,10 @@
         </ion-card-content>
       </ion-card>
      -->
+     <div class="spinner" *ngIf="cargando">
+      <ion-spinner name="circular" color="light"></ion-spinner>
+    </div>
+    
       <ion-card class="card" *ngFor="let item of cosasFeas; let i = index" data-index="i">
         
         <ion-card-header>

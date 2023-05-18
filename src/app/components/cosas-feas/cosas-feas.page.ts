@@ -13,14 +13,19 @@ import { ImagenesService } from 'src/app/services/imagenes.service';
 export class CosasFeasPage implements OnInit {
 
   @Input() opcion! : number;
-  cargando:boolean = false;
+  cargando:boolean = true;
   cosasFeas:any = [];
   constructor(public auth: AuthService, private imageService: ImagenesService, private firestore: FirestoreService, private router: Router) { }
 
   ngOnInit() {
-    this.firestore.traerCosasFeas().subscribe( data => {
-      this.cosasFeas = data;
-    })
+
+    setTimeout(() => {
+      this.firestore.traerCosasFeas().subscribe( data => {
+        this.cosasFeas = data;
+        this.cargando = false;
+      })
+    }, 2000);
+    
   }
 
   subirFoto(){
@@ -34,7 +39,7 @@ export class CosasFeasPage implements OnInit {
       likes : []
     }
     
-    this.imageService.addNewToGallery(foto, 1).then((data) =>{
+    this.imageService.addNewToGallery(foto, 2).then((data) =>{
       this.cargando = true;
       setTimeout(() => {
         this.cargando = false;

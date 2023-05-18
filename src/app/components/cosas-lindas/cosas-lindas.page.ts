@@ -12,15 +12,19 @@ import { ImagenesService } from 'src/app/services/imagenes.service';
 export class CosasLindasPage implements OnInit {
 
   @Input() opcion! : number;
-  cargando:boolean = false;
+  cargando:boolean = true;
   cosasLindas:any = [];
   constructor(public auth: AuthService, private imageService: ImagenesService, private firestore: FirestoreService, private router: Router) { }
 
   ngOnInit() {
 
-    this.firestore.traerCosasLindas().subscribe( data => {
-      this.cosasLindas = data;
-    })
+    setTimeout(() => {
+      this.firestore.traerCosasLindas().subscribe( data => {
+        this.cosasLindas = data;
+        this.cargando = false;
+      })
+    }, 2000);
+    
 
   }
 
@@ -35,7 +39,7 @@ export class CosasLindasPage implements OnInit {
       likes : []
     }
     
-    this.imageService.addNewToGallery(foto, 2).then((data) =>{
+    this.imageService.addNewToGallery(foto, 1).then((data) =>{
       this.cargando = true;
       setTimeout(() => {
         this.cargando = false;

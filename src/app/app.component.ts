@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {SplashScreen} from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,9 @@ export class AppComponent {
     // this.router.navigateByUrl('cosasLindas');
 
 
+  }
+
+  ionViewDitEnter(){
+    SplashScreen.hide();
   }
 }

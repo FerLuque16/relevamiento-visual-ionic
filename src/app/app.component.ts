@@ -15,6 +15,7 @@ export class AppComponent {
     //  this.router.navigateByUrl('home');
     // this.router.navigateByUrl('auth');
     // this.router.navigateByUrl('cosasLindas');
+    // this.router.navigateByUrl('mis-imagenes');
 
 
   }

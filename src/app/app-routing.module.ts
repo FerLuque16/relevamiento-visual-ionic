@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'graficos',
     loadChildren: () => import('./components/graficos/graficos.module').then( m => m.GraficosPageModule)
+  },
+  {
+    path: 'mis-imagenes',
+    loadChildren: () => import('./components/mis-imagenes/mis-imagenes.module').then( m => m.MisImagenesPageModule)
   }
 ];
 

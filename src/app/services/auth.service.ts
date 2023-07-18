@@ -10,7 +10,7 @@ export class AuthService {
   usuario: any;
   actualPassword:string = "";
   // actualEmail:string="";
-  actualEmail:string="invitado@invitado.com";
+  actualEmail:string="";
   isUserLogged:boolean = false;
 
   constructor(private afAuth: AngularFireAuth, private router:Router) { }
@@ -37,7 +37,7 @@ export class AuthService {
             })  
     } catch (error) {
       this.actualPassword = '';
-      this.actualEmail = 'admin@admin.com';
+      this.actualEmail = '';
       throw(error)
     }
     
